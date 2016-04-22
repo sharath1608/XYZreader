@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="smooth-app-bar-layout-23.2.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/XYZReader/build/intermediates/exploded-aar/me.henrytao/smooth-app-bar-layout/23.2.1/res" />
+      <root url="jar://$PROJECT_DIR$/XYZReader/build/intermediates/exploded-aar/me.henrytao/smooth-app-bar-layout/23.2.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.henrytao/smooth-app-bar-layout/23.2.1/fec6c11b574299849f662ca3a056a2e4c0671994/smooth-app-bar-layout-23.2.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
