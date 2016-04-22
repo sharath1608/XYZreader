@@ -1,0 +1,100 @@
+<android.support.design.widget.CoordinatorLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <me.henrytao.smoothappbarlayout.SmoothAppBarLayout
+    android:id="@+id/appbar_layout"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/app_bar_height">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsible_layout"
+            android:layout_width="match_parent"
+            app:expandedTitleMarginStart= "@dimen/detail_inner_horiz_margin"
+            app:expandedTitleMarginBottom="10dp"
+            app:contentScrim="@color/blue_A700"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:layout_height="match_parent">
+
+
+                <FrameLayout
+                    android:id="@+id/photo_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/photo_placeholder">
+
+                    <ImageView
+                        android:contentDescription="@string/poster_image"
+                        android:id="@+id/photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@drawable/photo_background_protection"
+                        android:layout_gravity="bottom"/>
+                </FrameLayout>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/app_bar"
+                android:elevation="4dp"
+                app:collapseIcon="@drawable/ic_launcher"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/toolbar_height"
+                app:layout_collapseMode="pin"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </me.henrytao.smoothappbarlayout.SmoothAppBarLayout>
+
+    <com.example.xyzreader.ui.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/author_date_layout"
+                android:layout_alignStart="@+id/article_body"
+                android:layout_marginTop="@dimen/article_body_margin_top"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/article_author"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/subtitleTextStyle"/>
+                <ImageView
+                    android:src="@drawable/dot_seperator"
+                    android:layout_gravity="top"
+                    android:layout_width="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="match_parent" />
+                <TextView
+                    android:id="@+id/article_dateView"
+                    android:layout_width="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_height="wrap_content"
+                    style="@style/subtitleTextStyle"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/article_body"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/author_date_layout"
+                android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
+                android:layout_marginRight="@dimen/detail_inner_horiz_margin"
+                android:paddingBottom="@dimen/detail_body_bottom_margin"
+                style="@style/bodyTextStyle"
+                android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
+        </RelativeLayout>
+
+    </com.example.xyzreader.ui.ObservableScrollView>
+</android.support.design.widget.CoordinatorLayout>
